@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://revmedia.ca/sitemap.xml

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found · Rev Media</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0A2A14" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill-rule='evenodd' d='M 0 0 H 100 V 70 L 70 100 H 0 Z M 24 22 H 72 V 44 H 46 V 78 H 24 Z' fill='%23F0EDD8'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,200..900,0..100,0..1;1,9..144,200..900,0..100,0..1&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --forest:        #0A2A14;
+      --forest-deep:   #061A0C;
+      --madinan-bright:#2ECC71;
+      --cream:         #F0EDD8;
+      --cream-dim:     rgba(240, 237, 216, 0.62);
+      --cream-faint:   rgba(240, 237, 216, 0.32);
+      --cream-line:    rgba(240, 237, 216, 0.12);
+      --display:       'Fraunces', ui-serif, Georgia, serif;
+      --body:          'Geist', ui-sans-serif, system-ui, sans-serif;
+      --mono:          'Geist Mono', ui-monospace, monospace;
+      --ease:          cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--body);
+      font-weight: 300;
+      background: var(--forest-deep);
+      color: var(--cream);
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(46, 204, 113, 0.12), transparent 70%),
+        linear-gradient(180deg, var(--forest-deep), var(--forest) 50%, var(--forest-deep));
+    }
+    body::after {
+      content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.4;
+      background-image:
+        linear-gradient(var(--cream-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--cream-line) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 75%);
+    }
+    .nav {
+      position: relative; z-index: 5;
+      padding: 22px clamp(20px, 4.5vw, 64px);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; color: var(--cream); }
+    .brand-mark { width: 30px; height: 30px; }
+    .brand-word {
+      font-weight: 600; font-size: 17px; letter-spacing: -0.015em;
+    }
+    .brand-word .light { font-weight: 300; color: var(--cream-dim); }
+    .nav-meta {
+      font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: var(--cream-dim);
+    }
+    main {
+      position: relative; z-index: 5;
+      flex: 1;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px clamp(20px, 4.5vw, 64px);
+      max-width: 1100px; margin: 0 auto; width: 100%;
+    }
+    .eyebrow {
+      font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--cream-dim);
+      display: flex; align-items: center; gap: 14px; margin-bottom: 56px;
+    }
+    .eyebrow::before {
+      content: ''; width: 56px; height: 1px; background: var(--cream-faint);
+    }
+    .code {
+      font-family: var(--display);
+      font-variation-settings: "opsz" 144, "wght" 300, "SOFT" 50, "WONK" 1;
+      font-style: italic;
+      font-size: clamp(96px, 18vw, 240px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--madinan-bright);
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-family: var(--display);
+      font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 80;
+      font-size: clamp(40px, 7vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      margin-bottom: 32px;
+      max-width: 18ch;
+    }
+    h1 em {
+      font-style: italic;
+      font-variation-settings: "opsz" 144, "wght" 300, "SOFT" 100, "WONK" 1;
+      color: var(--madinan-bright);
+    }
+    p {
+      font-size: 16px;
+      color: var(--cream-dim);
+      line-height: 1.6;
+      max-width: 48ch;
+      margin-bottom: 48px;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      padding: 16px 28px;
+      font-size: 13px; font-weight: 500;
+      border-radius: 999px;
+      transition: background 0.4s var(--ease), border-color 0.4s var(--ease), color 0.4s var(--ease);
+      text-decoration: none;
+    }
+    .btn .arrow { width: 14px; height: 14px; transition: transform 0.4s var(--ease); }
+    .btn:hover .arrow { transform: translateX(4px); }
+    .btn-primary {
+      background: #1A7A45; color: var(--cream);
+      border: 1px solid #1A7A45;
+    }
+    .btn-primary:hover { background: var(--madinan-bright); border-color: var(--madinan-bright); }
+    .btn-ghost {
+      background: transparent; color: var(--cream);
+      border: 1px solid var(--cream-faint);
+    }
+    .btn-ghost:hover { border-color: var(--cream); background: rgba(240,237,216,0.05); }
+    footer {
+      position: relative; z-index: 5;
+      padding: 28px clamp(20px, 4.5vw, 64px);
+      border-top: 1px solid var(--cream-line);
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--cream-faint);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a href="/" class="brand" style="text-decoration:none">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <path fill-rule="evenodd" d="M 0 0 H 100 V 70 L 70 100 H 0 Z M 24 22 H 72 V 44 H 46 V 78 H 24 Z" fill="currentColor"/>
+      </svg>
+      <span class="brand-word">rev<span class="light">media</span></span>
+    </a>
+    <span class="nav-meta">ERROR · 404</span>
+  </header>
+
+  <main>
+    <div class="eyebrow">STUDIO DOSSIER · NOT FOUND</div>
+    <div class="code">404</div>
+    <h1>This page didn't make it <em>past the build floor.</em></h1>
+    <p>The link you followed leads somewhere that does not exist yet, or no longer exists. The studio is still under construction. Head back to the homepage to follow along.</p>
+    <div class="actions">
+      <a href="/" class="btn btn-primary">
+        Return Home
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:info@revmedia.ca" class="btn btn-ghost">
+        Contact Rev Media
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2026 Rev Media. All rights reserved.</span>
+    <span>info@revmedia.ca · 1.365.357.3006</span>
+  </footer>
+</body>
+</html>
