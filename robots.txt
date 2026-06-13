@@ -1,4 +1,17 @@
+# robots.txt for revmedia.ca
 User-agent: *
+Allow: /
+
+# Allow AI crawlers (visibility in AI answer engines)
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://revmedia.ca/sitemap.xml

@@ -1,35 +1,68 @@
-# Rev Media · Coming Soon
+# Rev Media · AI Consulting & Implementation
 
-Single-page launch site for Rev Media (BrandRev Media & Designs Inc.).
+Single-page site for Rev Media (BrandRev Media & Designs Inc.).
 
-**Live:** [revmedia.ca](https://revmedia.ca) · **Launching:** June 1, 2026
+**Live:** [revmedia.ca](https://revmedia.ca)
+
+## Positioning
+
+AI-first. The primary offer is AI consulting and implementation (AI agents, workflow automation, MCP and systems integration, AI strategy and training). The creative studio (web design, SEO, marketing, brand) is the strong secondary offer. Two official partners are featured:
+
+- [24hourwebsite.ca](https://24hourwebsite.ca) · web design and development, 24 hour builds
+- [lunerasmart.com](https://www.lunerasmart.com) · AI-powered smart solutions for businesses and homes
 
 ## Stack
 
-Plain HTML, CSS, and vanilla JavaScript. No build step. Single self-contained file.
+Plain HTML, CSS, and vanilla JavaScript. No build step. Single self-contained file. ~94KB.
 
 - **Type:** Fraunces (variable serif) + Geist + Geist Mono via Google Fonts
-- **Logo:** embedded as base64 PNG (footer) + inline SVG (nav, favicon)
-- **Animation:** scroll-linked 3D parallax, mouse-driven tilt, IntersectionObserver reveals, text scramble
-- **SEO:** OG tags, Twitter card, Schema.org Organization JSON-LD, sitemap, robots.txt
-- **Forms:** mailto fallback today, auto-detects HTTPS endpoints once wired
+- **Motion & effects:** scroll progress bar, hero parallax, live "REV OS" console with tilt, hero word reveal, Apple-style scroll-fill manifesto text, scroll-velocity-reactive marquee, cinematic image reveals with parallax, floating contact dock, reduced-motion safe
+- **Imagery:** real portfolio work hotlinked from 24hourwebsite.ca plus Unsplash CDN photos; every below-the-fold image is lazy-loaded with explicit dimensions (no layout shift, fast first paint, tiny repo)
+
+## SEO
+
+Built to compete in Ontario AI / web / SEO search:
+
+- Keyword-targeted title, meta description, and keywords
+- Geo meta (region, placename, position, ICBM) for local search
+- Structured data: Organization (ProfessionalService) + OfferCatalog, FAQPage, WebSite, BreadcrumbList JSON-LD
+- "AI for every industry" section targeting "AI for [industry]" queries
+- "Service Areas" section targeting "AI agency [city]" local queries (Hamilton, Burlington, Oakville, Toronto, GTA, etc.)
+- Open Graph + Twitter cards with branded og-cover.jpg
+- robots.txt allows major AI crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) for AI answer-engine visibility
+- Image sitemap, humans.txt
+- Full favicon set + web app manifest
+
+## Lead capture
+
+The audit form opens the visitor's email client pre-filled and addressed to info@revmedia.ca, then shows a confirmation state. Phone (tel:), WhatsApp, and mailto links appear throughout, plus a floating contact dock on scroll.
+
+## Files
+
+| File | Purpose |
+| --- | --- |
+| `index.html` | The site |
+| `404.html` | Custom not-found page |
+| `og-cover.jpg` | Social share image |
+| `favicon.svg` / `favicon.ico` / `favicon-32.png` | Browser favicons |
+| `apple-touch-icon.png` | iOS home-screen icon |
+| `icon-192.png` / `icon-512.png` | PWA / Android icons |
+| `site.webmanifest` | Web app manifest |
+| `logo.svg` | Brand logo |
+| `sitemap.xml` | Image sitemap |
+| `robots.txt` | Crawl rules (AI-crawler friendly) |
+| `humans.txt` | Credits |
+| `CNAME` | Custom domain (revmedia.ca) |
+| `.nojekyll` | Disables Jekyll on GitHub Pages |
 
 ## Deploy
 
-Push to `main`, enable GitHub Pages on the repo Settings, point to root. Custom domain handled via the included `CNAME` file.
-
-## Form backend
-
-Both forms (`signup`, `contact`) ship with `action="mailto:info@revmedia.ca"`. To swap in a real endpoint:
-
-1. Sign up for [Formspree](https://formspree.io) or [Web3Forms](https://web3forms.com)
-2. Replace each form's `action` attribute with the HTTPS URL
-3. The JS automatically routes via `fetch()` instead of mailto when it sees `https://`
+Push all files to `main`, enable GitHub Pages on the repo Settings, point to root. Keep `.nojekyll` and `CNAME` in the root. Custom domain is handled by `CNAME`.
 
 ## Contact
 
 - info@revmedia.ca
-- 1.365.357.3006
+- 1 365 357 3006
 - [@revmedia.ca](https://instagram.com/revmedia.ca)
 
 ---

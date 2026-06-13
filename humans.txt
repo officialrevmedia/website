@@ -1,0 +1,14 @@
+/* TEAM */
+  Studio: Rev Media (BrandRev Media & Designs Inc.)
+  Site: revmedia.ca
+  Contact: info@revmedia.ca
+  Location: Ontario, Canada
+
+/* SERVICES */
+  AI consulting & implementation
+  AI agents, workflow automation, MCP integration
+  Web design, SEO, marketing, brand
+
+/* PARTNERS */
+  24hourwebsite.ca
+  lunerasmart.com
