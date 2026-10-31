@@ -1,14 +1,27 @@
 {
   "name": "Rev Media",
   "short_name": "Rev Media",
-  "description": "AI consulting and implementation, plus web design, SEO, and marketing. Ontario, Canada and worldwide.",
+  "description": "AI consulting and implementation, web design, SEO and branding. Hamilton, Ontario.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#04130A",
-  "theme_color": "#04130A",
+  "background_color": "#F0F0EE",
+  "theme_color": "#0A2A14",
   "icons": [
-    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
   ]
 }

@@ -2,13 +2,13 @@
   Studio: Rev Media (BrandRev Media & Designs Inc.)
   Site: revmedia.ca
   Contact: info@revmedia.ca
-  Location: Ontario, Canada
-
-/* SERVICES */
-  AI consulting & implementation
-  AI agents, workflow automation, MCP integration
-  Web design, SEO, marketing, brand
+  Location: Hamilton, Ontario, Canada
 
 /* PARTNERS */
   24hourwebsite.ca
   lunerasmart.com
+
+/* SITE */
+  Last update: 2026-10-31
+  Standards: HTML, CSS, JavaScript
+  Fonts: Geist, Geist Mono (self-hosted)

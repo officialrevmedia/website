@@ -1,70 +1,46 @@
-# Rev Media · AI Consulting & Implementation
+# revmedia.ca
 
-Single-page site for Rev Media (BrandRev Media & Designs Inc.).
+The Rev Media website (BrandRev Media & Designs Inc.). Plain HTML, CSS and JavaScript, hosted on GitHub Pages. Every page is pre-rendered: the full content is in the HTML that Google receives, with no build step and no framework.
 
-**Live:** [revmedia.ca](https://revmedia.ca)
+## Upload
 
-## Positioning
+1. Open the GitHub repository that publishes revmedia.ca and choose **Add file > Upload files**.
+2. Drag in everything from this folder, including the `assets` folder and the hidden `.nojekyll` file (on a Mac, press Cmd + Shift + . in Finder to show hidden files).
+3. Commit to `main`. GitHub Pages republishes within a minute or two.
 
-AI-first. The primary offer is AI consulting and implementation (AI agents, workflow automation, MCP and systems integration, AI strategy and training). The creative studio (web design, SEO, marketing, brand) is the strong secondary offer. Two official partners are featured:
+`CNAME` keeps the custom domain set to `revmedia.ca`.
 
-- [24hourwebsite.ca](https://24hourwebsite.ca) · web design and development, 24 hour builds
-- [lunerasmart.com](https://www.lunerasmart.com) · AI-powered smart solutions for businesses and homes
+## Pages
 
-## Stack
-
-Plain HTML, CSS, and vanilla JavaScript. No build step. Single self-contained file. ~94KB.
-
-- **Type:** Fraunces (variable serif) + Geist + Geist Mono via Google Fonts
-- **Motion & effects:** scroll progress bar, hero parallax, live "REV OS" console with tilt, hero word reveal, Apple-style scroll-fill manifesto text, scroll-velocity-reactive marquee, cinematic image reveals with parallax, floating contact dock, reduced-motion safe
-- **Imagery:** real portfolio work hotlinked from 24hourwebsite.ca plus Unsplash CDN photos; every below-the-fold image is lazy-loaded with explicit dimensions (no layout shift, fast first paint, tiny repo)
-
-## SEO
-
-Built to compete in Ontario AI / web / SEO search:
-
-- Keyword-targeted title, meta description, and keywords
-- Geo meta (region, placename, position, ICBM) for local search
-- Structured data: Organization (ProfessionalService) + OfferCatalog, FAQPage, WebSite, BreadcrumbList JSON-LD
-- "AI for every industry" section targeting "AI for [industry]" queries
-- "Service Areas" section targeting "AI agency [city]" local queries (Hamilton, Burlington, Oakville, Toronto, GTA, etc.)
-- Open Graph + Twitter cards with branded og-cover.jpg
-- robots.txt allows major AI crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) for AI answer-engine visibility
-- Image sitemap, humans.txt
-- Full favicon set + web app manifest
-
-## Lead capture
-
-The audit form opens the visitor's email client pre-filled and addressed to info@revmedia.ca, then shows a confirmation state. Phone (tel:), WhatsApp, and mailto links appear throughout, plus a floating contact dock on scroll.
-
-## Files
-
-| File | Purpose |
+| URL | Page |
 | --- | --- |
-| `index.html` | The site |
-| `404.html` | Custom not-found page |
-| `og-cover.jpg` | Social share image |
-| `favicon.svg` / `favicon.ico` / `favicon-32.png` | Browser favicons |
-| `apple-touch-icon.png` | iOS home-screen icon |
-| `icon-192.png` / `icon-512.png` | PWA / Android icons |
-| `site.webmanifest` | Web app manifest |
-| `logo.svg` | Brand logo |
-| `sitemap.xml` | Image sitemap |
-| `robots.txt` | Crawl rules (AI-crawler friendly) |
-| `humans.txt` | Credits |
-| `CNAME` | Custom domain (revmedia.ca) |
-| `.nojekyll` | Disables Jekyll on GitHub Pages |
+| `/` | Home |
+| `/services/` | All services |
+| `/ai-agents/` | AI Agents & Assistants |
+| `/workflow-automation/` | Workflow Automation |
+| `/ai-integration/` | Systems & MCP Integration |
+| `/ai-strategy/` | AI Strategy & Training |
+| `/web-design/` | Web Design & Development |
+| `/seo/` | SEO & Search |
+| `/brand-and-marketing/` | Brand & Marketing |
+| `/industries/` | Industries |
+| `/work/` | Selected work |
+| `/service-areas/` | Service areas |
+| `/partners/` | 24 Hour Website and Lunera Smart |
+| `/faq/` | FAQ |
+| `/contact/` | Free AI audit form |
+| `/privacy/` | Privacy policy |
+| `/thank-you/` | Form confirmation (not indexed) |
+| `404.html` | Custom not-found page (not indexed) |
 
-## Deploy
+## Forms
 
-Push all files to `main`, enable GitHub Pages on the repo Settings, point to root. Keep `.nojekyll` and `CNAME` in the root. Custom domain is handled by `CNAME`.
+The audit forms on `/` and `/contact/` send to **info@revmedia.ca** through FormSubmit. The first submission triggers a one-time "Activate Form" email to info@revmedia.ca. Click it once, then test again. If a send ever fails, the form shows the phone number and email instead so no lead is lost.
 
-## Contact
+## Google Analytics
 
-- info@revmedia.ca
-- 1 365 357 3006
-- [@revmedia.ca](https://instagram.com/revmedia.ca)
+Open `analytics.js`, paste your GA4 Measurement ID (starts with `G-`) between the quotes, and upload that one file. Leave it empty and nothing loads. Events sent: `generate_lead` (form sent), `click_call`, `click_email`, `click_whatsapp`.
 
----
+## SEO built in
 
-© 2026 BrandRev Media & Designs Inc.
+Unique title and meta description on every page, one H1 per page, canonical tags, Open Graph and Twitter images, breadcrumbs (visible and in schema), Organization, WebSite, Service, FAQPage and BreadcrumbList structured data, `sitemap.xml`, `robots.txt` open to Google and AI crawlers, WebP images with alt text and fixed dimensions, self-hosted fonts, and no redirect chains (all internal links use the final URL).
